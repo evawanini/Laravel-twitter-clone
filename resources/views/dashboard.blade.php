@@ -2,7 +2,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashbard') }}
+            {{ __('Dashboard') }}
         </h2>
     </x-slot>
     <!DOCTYPE html>
@@ -23,9 +23,9 @@
 
             <div>
                 <div class="border border-gray-300">
-                  @include('timeline_tweet')
-                  @include('timeline_tweet')
-                  @include('timeline_tweet')
+                    @foreach($tweets as $tweet)
+                    @include('timeline_tweet')
+                    @endforeach
                 </div>
 
             </div>
