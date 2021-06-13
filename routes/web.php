@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TweetController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +29,5 @@ Route::get('/dashboard', [TweetController::class, 'index'])->name('dashboard');
 Route::post('/dashboard', [TweetController::class, 'store'])->name('saveTweet');
 Route::get('/dashboard/create', [TweetController::class, 'create']);
 Route::get('/dashboard/{tweet}', [TweetController::class, 'show']);
+
+Route::get('/profiles/{user}', [ProfileController::class, 'show'])->name('profile');

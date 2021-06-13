@@ -32,7 +32,7 @@
         </div>
 
         <div>
-            @include('my_friends')
+            @include('my_following')
         </div>
     </div>
 

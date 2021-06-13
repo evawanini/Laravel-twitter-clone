@@ -21,6 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->unsignedBigInteger('id')
+                ->references('id')
+                ->on('tweets')
+                ->onDelete('cascade');
         });
     }
 

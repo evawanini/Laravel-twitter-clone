@@ -9,7 +9,7 @@ class TweetController extends Controller
 {
     public function index()
     {
-        $tweets = Tweet::all();
+        $tweets = Tweet::latest()->get();
         return view('dashboard', ['tweets' => $tweets]);
     }
 
@@ -28,7 +28,7 @@ class TweetController extends Controller
     //     return redirect('/dashboard');
     // }
 
-    public function store()
+    public function store(Tweet $tweet)
     {
         $tweetbody = request()->validate([
             'body' => 'required'
