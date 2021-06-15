@@ -10,6 +10,6 @@ class ProfileController extends Controller
     public function show ($id) 
     {
       $users = User::find($id);
-      return view('profile',['users' => $users]);
+      return view('profile_info',['users' => $users]);
     }
 }

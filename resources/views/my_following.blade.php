@@ -1,5 +1,5 @@
 @extends('layout')
-<h3 class="uppercase font-bold mr-4"> My Following </h3>
+<h3 class="uppercase font-bold mr-4"> My Followers </h3>
 <ul>
 @foreach(auth()->user()->follow as $user)
 <li>
