@@ -18,23 +18,13 @@ class TweetController extends Controller
         return view('timeline_tweet');
     }
 
-    // public function store(Request $request, Tweet $tweets)
-    // {
-
-    //     Tweet::create(request()->validate([
-    //         'body' => 'required'
-    //     ]));
-
-    //     return redirect('/dashboard');
-    // }
-
     public function store(Tweet $tweet)
     {
         $tweetbody = request()->validate([
             'body' => 'required'
         ]);
 
-        Tweet::create([
+       return Tweet::create([
             'user_id' => auth()->id(),
             'body' => $tweetbody['body']
         ]);
