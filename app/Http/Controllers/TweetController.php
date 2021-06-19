@@ -24,7 +24,7 @@ class TweetController extends Controller
             'body' => 'required'
         ]);
 
-       return Tweet::create([
+        Tweet::create([
             'user_id' => auth()->id(),
             'body' => $tweetbody['body']
         ]);
