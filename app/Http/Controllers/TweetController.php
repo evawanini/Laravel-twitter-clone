@@ -18,7 +18,7 @@ class TweetController extends Controller
         return view('timeline_tweet');
     }
 
-    public function store(Tweet $tweet)
+    public function store()
     {
         $tweetbody = request()->validate([
             'body' => 'required'
